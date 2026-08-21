@@ -1,31 +1,19 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin - Len Van</title>
-<script src="https://cdn.tailwindcss.com"></script></head>
-<body class="bg-gray-950 text-white p-6">
-<div class="max-w-lg mx-auto bg-gray-900 p-6 rounded border border-green-500">
-<h1 class="text-2xl font-bold text-green-400 mb-4">Admin - Post Tip</h1>
-<input id="match" placeholder="Match: Arsenal vs Chelsea" class="w-full p-3 mb-3 bg-black border border-gray-700 rounded">
-<input id="tip" placeholder="Tip: Over 2.5 Goals" class="w-full p-3 mb-3 bg-black border border-gray-700 rounded">
-<input id="odds" placeholder="Odds: 1.80" class="w-full p-3 mb-3 bg-black border border-gray-700 rounded">
-<button onclick="postTip()" class="w-full bg-green-500 hover:bg-green-600 p-3 rounded font-bold text-black">POST TIP</button>
-<p id="status" class="mt-4 text-center font-bold"></p>
-<div class="mt-6 text-center space-y-2">
-<a href="https://len-van-tips-arena-frontend.vercel.app" class="text-green-400 underline block">View Main Site</a>
-<a href="https://len-van-tips-arena-backend.onrender.com/api/tips" class="text-gray-400 underline text-sm block">Check Backend API</a>
-</div></div>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin</title>
+</head>
+<body>
 <script>
-const API='https://len-van-tips-arena-backend.onrender.com/api/tips';
-async function postTip(){
- const match=document.getElementById('match').value.trim();
- const tip=document.getElementById('tip').value.trim();
- const odds=document.getElementById('odds').value.trim();
- if(!match||!tip) return alert('Fill match and tip');
- document.getElementById('status').textContent='Posting...';
- try{
-  const r=await fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({match,tip,odds})});
-  const d=await r.json();
-  document.getElementById('status').textContent='✅ '+d.message+' - SUCCESS!';
-  document.getElementById('match').value='';document.getElementById('tip').value='';document.getElementById('odds').value='';
- }catch(e){document.getElementById('status').textContent='❌ Failed: '+e; console.error(e);}
+let p=prompt("PASSWORD:");
+if(p!=="Kipchumba24!"){
+alert("DENIED");
+location.href="index.html";
 }
-</script></body></html>
+</script>
+<h1>ADMIN PANEL</h1>
+<p>Welcome Boss!</p>
+<a href="index.html">Home</a>
+</body>
+</html>
