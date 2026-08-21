@@ -2,18 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin</title>
-</head>
-<body>
+<title>Admin - Len Van</title>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-let p=prompt("PASSWORD:");
-if(p!=="Kipchumba24!"){
-alert("DENIED");
+let a=prompt("PASSWORD:");
+if(a!=="Kipchumba24!"){
+alert("DENIED!");
 location.href="index.html";
 }
 </script>
-<h1>ADMIN PANEL</h1>
-<p>Welcome Boss!</p>
-<a href="index.html">Home</a>
+</head>
+<body class="bg-black text-white p-6">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-3xl font-bold text-green-400">
+LEN VAN - ADMIN
+</h1>
+<p class="mt-2 text-green-300">
+🔒 Secured
+</p>
+<div class="mt-8 p-6 bg-zinc-900 rounded-xl">
+<p>Dashboard Ready</p>
+<p class="text-gray-400">
+Lock is active
+</p>
+<a href="index.html" class="text-cyan-400 underline">
+Home
+</a>
+</div>
+</div>
 </body>
-</html>
+</html> 
